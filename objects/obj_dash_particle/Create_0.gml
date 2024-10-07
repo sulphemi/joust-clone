@@ -1,8 +1,8 @@
 // Inherit the parent event
 event_inherited();
 
-xoffset = random_range(-20, 20);
-yoffset = random_range(-20, 20);
+xoffset = random_range(-40, 40);
+yoffset = random_range(-40, 40);
 
 x += xoffset;
 y += yoffset;
