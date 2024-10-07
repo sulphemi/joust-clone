@@ -14,13 +14,35 @@ if (grounded) dash_ok = true;
 if (dash_ok and keyboard_check_pressed(DASH)) {
 	dash_ok = false; // consume dash
 	
-	// instantly change position
-	if (MOVING_LEFT) x -= 100;
-	if (MOVING_RIGHT) x += 100;
-	if (keyboard_check(UP)) y -= 100;
-	if (keyboard_check(DOWN)) y += 100;
+	// cache previous position
+	var prev_x = x;
+	var prev_y = y;
 	
+	// instantly change position
+	if (MOVING_LEFT && MOVING_RIGHT) {
+		if (facing) {
+			x += 150;
+		} else {
+			x -= 150;	
+		}
+	} else {
+		if (MOVING_LEFT) {
+			x -= 150;
+			xv = min(xv, 0);
+		}
+		if (MOVING_RIGHT) {
+			x += 150;
+			xv = max(xv, 0);
+		}
+	}
+	if (keyboard_check(UP)) y -= 150;
+	if (keyboard_check(DOWN)) y += 150;
 	yv = min(0, yv);
+	
+	// draw particles
+	for (var i = 0; i < 30; i++) {
+		var instance = instance_create_depth(prev_x, prev_y, -1, obj_dash_particle);
+	}
 }
 
 
