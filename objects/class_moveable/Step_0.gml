@@ -1,5 +1,12 @@
 grounded = false; // assume not grounded
 
+facing = xv > 0;
+if (facing) {
+	image_xscale = -1;	
+} else {
+	image_xscale = 1;
+}
+
 // movement controls
 if (MOVING_LEFT) {
 	xv -= .1;
@@ -27,30 +34,30 @@ xv *= f;
 
 // collide with platforms
 if (yv >= 0) {
-	var platform = collision_rectangle(x - sprite_width / 2, y, x + sprite_width / 2, y + sprite_height / 2 + yv, obj_platform, 0, 1);
+	var platform = collision_rectangle(x - hitbox_width / 2, y, x + hitbox_width / 2, y + hitbox_height / 2 + yv, obj_platform, 0, 1);
 	if (platform) {
-		y = platform.y - sprite_height / 2;
+		y = platform.y - hitbox_height / 2;
 		yv = 0;
 		grounded = true;
 	}
 }
 
 if (yv < 0) {
-	var platform = collision_rectangle(x - sprite_width / 2, y - sprite_height / 2 + yv, x + sprite_width / 2, y, obj_platform, 0, 1);
+	var platform = collision_rectangle(x - hitbox_width / 2, y - hitbox_height / 2 + yv, x + hitbox_width / 2, y, obj_platform, 0, 1);
 	if (platform) {
 		yv = 0;	
 	}
 }
 
 if (xv >= 0) {
-	var	platform = collision_rectangle(x - sprite_width / 2, y - sprite_height / 2, x + sprite_width / 2 + xv, y, obj_platform, 0, 1);
+	var	platform = collision_rectangle(x - hitbox_width / 2, y - hitbox_height / 2, x + hitbox_width / 2 + xv, y, obj_platform, 0, 1);
 	if (platform) {
 		xv *= -1;
 	}
 }
 
 if (xv < 0) {
-	var	platform = collision_rectangle(x - sprite_width / 2 + xv, y - sprite_height / 2, x + sprite_width / 2, y, obj_platform, 0, 1);
+	var	platform = collision_rectangle(x - hitbox_width / 2 + xv, y - hitbox_height / 2, x + hitbox_width / 2, y, obj_platform, 0, 1);
 	if (platform) {
 		xv *= -1;
 	}

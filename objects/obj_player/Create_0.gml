@@ -6,14 +6,16 @@ UP = ord("W");
 DOWN = ord("S");
 DASH = vk_lshift;
 
-sprite_flying = Sprite1_2;
-sprite_grounded = Sprite1;
-sprite_slowing = Sprite1_1;
+sprite_flying = spr_player_flying;
+sprite_grounded = spr_player;
+sprite_slowing = spr_player_slowing;
 
 dash_ok = true;
 
 // Inherit the parent event
 event_inherited();
+
+hitbox_width = 30;
 
 function die() {
 	x = startx;

@@ -1,13 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-facing = xv > 0;
-if (facing) {
-	image_xscale = -1;	
-} else {
-	image_xscale = 1;
-}
-
 if (flap_cooldown <= 0 && (obj_player.y <= y || random(1) < 0.1)) {
 	MOVING_FLAP = true;
 	flap_cooldown = irandom_range(0, 30);

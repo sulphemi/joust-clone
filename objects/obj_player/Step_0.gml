@@ -20,18 +20,18 @@ if (dash_ok and keyboard_check_pressed(DASH)) {
 	if (keyboard_check(UP)) y -= 100;
 	if (keyboard_check(DOWN)) y += 100;
 	
-	yv = min(0, yv); // don't 
+	yv = min(0, yv);
 }
 
 
 // collision with enemies
-var collided = collision_rectangle(x - sprite_width / 2, y - sprite_width / 2, x + sprite_width / 2, y + sprite_height / 2, obj_enemy, 0, 1);
+var collided = collision_rectangle(x - hitbox_width / 2, y - hitbox_height / 2, x + hitbox_width / 2, y + hitbox_height / 2, obj_enemy, 0, 1);
 if (collided) {
 	if (y < collided.y - collided.sprite_height / 2) { // the thing is below me
 		//yv *= -1;
 		yv = -8; // small bounce
 		instance_destroy(collided, true); // kill the thing
-		dash_ok = true; // refresh dashw
+		dash_ok = true; // refresh dash
 	} else {
 		if (y > collided.y + collided.sprite_height / 2) {
 			// the thing is way above me

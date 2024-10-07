@@ -11,3 +11,8 @@ grounded = false;
 MOVING_LEFT = false;
 MOVING_RIGHT = false;
 MOVING_FLAP = false;
+
+facing = 0;
+
+hitbox_height = sprite_height;
+hitbox_width = sprite_width;
