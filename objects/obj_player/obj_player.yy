@@ -9,8 +9,8 @@
   "name":"obj_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"entities",
+    "path":"folders/Objects/entities.yy",
   },
   "parentObjectId":{
     "name":"class_moveable",

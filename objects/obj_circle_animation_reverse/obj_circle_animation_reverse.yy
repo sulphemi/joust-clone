@@ -1,21 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_enemy",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_circle_animation_reverse",
+  "eventList":[],
   "managed":true,
-  "name":"obj_enemy",
+  "name":"obj_circle_animation_reverse",
   "overriddenProperties":[],
   "parent":{
-    "name":"abstract",
-    "path":"folders/Objects/abstract.yy",
+    "name":"animations",
+    "path":"folders/Objects/animations.yy",
   },
-  "parentObjectId":{
-    "name":"class_moveable",
-    "path":"objects/class_moveable/class_moveable.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

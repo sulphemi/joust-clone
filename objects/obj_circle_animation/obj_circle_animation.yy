@@ -10,8 +10,8 @@
   "name":"obj_circle_animation",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"animations",
+    "path":"folders/Objects/animations.yy",
   },
   "parentObjectId":null,
   "persistent":false,
