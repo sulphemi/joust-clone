@@ -1,9 +1,10 @@
 // controls
-LEFT = vk_left;
-RIGHT = vk_right;
+LEFT = ord("A");
+RIGHT = ord("D");
 FLAP = vk_space;
-UP = vk_up;
-DASH = vk_lcontrol;
+UP = ord("W");
+DOWN = ord("S");
+DASH = vk_lshift;
 
 sprite_flying = Sprite1_2;
 sprite_grounded = Sprite1;

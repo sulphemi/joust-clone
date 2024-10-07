@@ -18,8 +18,9 @@ if (dash_ok and keyboard_check_pressed(DASH)) {
 	if (MOVING_LEFT) x -= 100;
 	if (MOVING_RIGHT) x += 100;
 	if (keyboard_check(UP)) y -= 100;
+	if (keyboard_check(DOWN)) y += 100;
 	
-	yv = 0; // reset yvelocity
+	yv = min(0, yv); // don't 
 }
 
 
@@ -29,7 +30,8 @@ if (collided) {
 	if (y < collided.y - collided.sprite_height / 2) { // the thing is below me
 		//yv *= -1;
 		yv = -8; // small bounce
-		instance_destroy(collided, true);
+		instance_destroy(collided, true); // kill the thing
+		dash_ok = true; // refresh dashw
 	} else {
 		if (y > collided.y + collided.sprite_height / 2) {
 			// the thing is way above me
