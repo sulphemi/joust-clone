@@ -19,13 +19,7 @@ if (dash_ok and keyboard_check_pressed(DASH)) {
 	var prev_y = y;
 	
 	// instantly change position
-	if (MOVING_LEFT && MOVING_RIGHT) {
-		if (facing) {
-			x += 150;
-		} else {
-			x -= 150;	
-		}
-	} else {
+	if (MOVING_LEFT ^ MOVING_RIGHT) { // exor
 		if (MOVING_LEFT) {
 			x -= 150;
 			xv = min(xv, 0);
@@ -33,6 +27,12 @@ if (dash_ok and keyboard_check_pressed(DASH)) {
 		if (MOVING_RIGHT) {
 			x += 150;
 			xv = max(xv, 0);
+		}
+	} else { // only one is being pressed
+		if (facing) {
+			x += 150;
+		} else {
+			x -= 150;	
 		}
 	}
 	if (keyboard_check(UP)) y -= 150;
