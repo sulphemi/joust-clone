@@ -57,3 +57,18 @@ if (collided) {
 		}
 	}
 }
+
+// lerpy derpy
+/*
+if (MOVING_LEFT || MOVING_RIGHT) {
+	image_yscale = lerp(image_yscale, 0.9, 0.1);
+} else {
+	image_yscale = lerp(image_yscale, 1.0, 0.4);
+}
+*/
+
+if (FLAP) {
+	image_yscale = 0.9;
+} else {
+	image_yscale = lerp(image_yscale, 1.0, 0.1);	
+}
