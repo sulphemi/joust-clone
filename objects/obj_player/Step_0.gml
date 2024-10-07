@@ -45,6 +45,12 @@ if (dash_ok and keyboard_check_pressed(DASH)) {
 	}
 }
 
+if (dash_ok) {
+	image_blend = -1;	
+} else {
+	image_blend = dashless_blend;
+}
+
 
 // collision with enemies
 var collided = collision_rectangle(x - hitbox_width / 2, y - hitbox_height / 2, x + hitbox_width / 2, y + hitbox_height / 2, obj_enemy, 0, 1);
