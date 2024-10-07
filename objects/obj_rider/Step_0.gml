@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (flap_cooldown <= 0 && random(1) < 0.1) {
+if (flap_cooldown <= 0 && grounded && random(1) < 0.1) {
 	MOVING_FLAP = true;
-	flap_cooldown = irandom_range(0, 20);
+	flap_cooldown = irandom_range(0, 30);
 } else {
 	MOVING_FLAP = false;
 	if (flap_cooldown > 0) flap_cooldown--;
@@ -38,17 +38,5 @@ if (collided) {
 			// bounce
 			xv *= -1;	
 		}
-	}
-}
-
-if (MOVING_FLAP) {
-	sprite_index = spr_flying_flap;
-	flap_frames = 10;
-} else {
-	if (flap_frames) {
-		sprite_index = spr_flying_flap;
-		flap_frames--;
-	} else {
-		sprite_index = spr_flying;	
 	}
 }

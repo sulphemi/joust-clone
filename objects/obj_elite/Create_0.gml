@@ -15,5 +15,5 @@ event_inherited();
 
 flap_frames = 0;
 
-XV_LOWER = -3;
-XV_UPPER = 3;
+XV_LOWER = -5;
+XV_UPPER = 5;
