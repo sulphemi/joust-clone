@@ -22,9 +22,9 @@ if (MOVING_FLAP) {
 
 // cap values
 y = max(y, -10);
-yv = max(yv, -10);
-xv = max(xv, -10);
-xv = min(xv, 10);
+yv = max(yv, YV_LOWER);
+xv = max(xv, XV_LOWER);
+xv = min(xv, YV_UPPER);
 
 // apply movement
 x += xv;

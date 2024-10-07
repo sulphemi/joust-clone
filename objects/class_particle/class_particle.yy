@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_particle",
-    "path":"sprites/spr_particle/spr_particle.yy",
+    "name":"particle",
+    "path":"sprites/particle/particle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

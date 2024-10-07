@@ -16,3 +16,8 @@ facing = 0;
 
 hitbox_height = sprite_height;
 hitbox_width = sprite_width;
+
+YV_LOWER = -10;
+XV_LOWER = -10;
+YV_UPPER = 10;
+XV_UPPER = 10;
