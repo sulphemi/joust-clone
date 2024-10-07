@@ -1,4 +1,4 @@
-color = c_white;
+color = c_gray;
 
 PI = 3.1415926;
 TWOPI = 6.2831852;
