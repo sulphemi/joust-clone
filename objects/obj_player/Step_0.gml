@@ -49,9 +49,10 @@ if (dash_ok and keyboard_check_pressed(DASH)) {
 	if (dashed_into) instance_destroy(dashed_into);
 	
 	// if i ended up in something, kill that thing
-	var collided = collision_rectangle(x - hitbox_width / 2, y - hitbox_height / 2, x + hitbox_width / 2, y + hitbox_height / 2, obj_enemy, 0, 1);
-	if (collided) instance_destroy(collided);
+	collidable_frames = 10;
 }
+
+if (collidable_frames) collidable_frames--;
 
 if (dash_ok) {
 	image_blend = -1;	
@@ -63,7 +64,9 @@ if (dash_ok) {
 // collision with enemies
 var collided = collision_rectangle(x - hitbox_width / 2, y - hitbox_height / 2, x + hitbox_width / 2, y + hitbox_height / 2, obj_enemy, 0, 1);
 if (collided) {
-	if (y < collided.y - collided.sprite_height / 2) { // the thing is below me
+	if (collidable_frames) { // i just came off of a dash
+		instance_destroy(collided);
+	} else if (y < collided.y - collided.sprite_height / 2) { // the thing is below me
 		//yv *= -1;
 		yv = -8; // small bounce
 		instance_destroy(collided, true); // kill the thing
