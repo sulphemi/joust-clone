@@ -61,6 +61,7 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_rider","path":"objects/obj_rider/obj_rider.yy",},},
     {"id":{"name":"obj_score_display","path":"objects/obj_score_display/obj_score_display.yy",},},
+    {"id":{"name":"obj_screenshakeotron9000","path":"objects/obj_screenshakeotron9000/obj_screenshakeotron9000.yy",},},
     {"id":{"name":"obj_spawn_animation","path":"objects/obj_spawn_animation/obj_spawn_animation.yy",},},
     {"id":{"name":"obj_start_manager","path":"objects/obj_start_manager/obj_start_manager.yy",},},
     {"id":{"name":"debug_particles","path":"rooms/debug_particles/debug_particles.yy",},},
