@@ -1,0 +1,1 @@
+START = vk_space;
