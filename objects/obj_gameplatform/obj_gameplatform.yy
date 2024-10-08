@@ -1,15 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_platform",
+  "%Name":"obj_gameplatform",
   "eventList":[],
   "managed":true,
-  "name":"obj_platform",
+  "name":"obj_gameplatform",
   "overriddenProperties":[],
   "parent":{
     "name":"tiles",
     "path":"folders/Objects/tiles.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_platform",
+    "path":"objects/obj_platform/obj_platform.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
