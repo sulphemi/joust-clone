@@ -1,0 +1,1 @@
+brick_ct = irandom_range(5, 25);

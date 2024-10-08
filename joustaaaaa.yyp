@@ -45,6 +45,7 @@
   "resources":[
     {"id":{"name":"class_moveable","path":"objects/class_moveable/class_moveable.yy",},},
     {"id":{"name":"class_particle","path":"objects/class_particle/class_particle.yy",},},
+    {"id":{"name":"obj_bricklayer","path":"objects/obj_bricklayer/obj_bricklayer.yy",},},
     {"id":{"name":"obj_circle_animation_reverse","path":"objects/obj_circle_animation_reverse/obj_circle_animation_reverse.yy",},},
     {"id":{"name":"obj_circle_animation","path":"objects/obj_circle_animation/obj_circle_animation.yy",},},
     {"id":{"name":"obj_circle_particle","path":"objects/obj_circle_particle/obj_circle_particle.yy",},},
@@ -52,6 +53,7 @@
     {"id":{"name":"obj_elite","path":"objects/obj_elite/obj_elite.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_flying","path":"objects/obj_flying/obj_flying.yy",},},
+    {"id":{"name":"obj_game_manager","path":"objects/obj_game_manager/obj_game_manager.yy",},},
     {"id":{"name":"obj_gameplatform","path":"objects/obj_gameplatform/obj_gameplatform.yy",},},
     {"id":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},},
     {"id":{"name":"obj_player_death_animation","path":"objects/obj_player_death_animation/obj_player_death_animation.yy",},},
