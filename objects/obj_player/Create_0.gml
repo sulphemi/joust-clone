@@ -23,6 +23,7 @@ dead = false;
 iframes = 60;
 
 function die() {
+	lives--;
 	obj_screenshakeotron9000.shake_screen();
 	instance_create_depth(x, y, -10, obj_player_death_animation);
 	dead = true;

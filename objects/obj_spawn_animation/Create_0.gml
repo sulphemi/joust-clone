@@ -3,7 +3,7 @@ color = c_red;
 
 PI = 3.1415926;
 TWOPI = 6.2831852;
-MAX_R = 100;
+MAX_R = 150;
 SPEED_DIV = 80;
 radius = 1;
 star_ct = 10;
