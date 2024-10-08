@@ -4,4 +4,9 @@
 // Inherit the parent event
 event_inherited();
 
-obj_player.dead = false;
+if (lives) {
+	obj_player.dead = false;
+	lives--;
+} else {
+	room = rm_end;	
+}

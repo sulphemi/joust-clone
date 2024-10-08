@@ -4,5 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-x = lerp(x, obj_player.x, 0.04);
-y = lerp(y, obj_player.y, 0.04);
+if (lives) {
+	x = lerp(x, obj_player.x, 0.04);
+	y = lerp(y, obj_player.y, 0.04);
+}

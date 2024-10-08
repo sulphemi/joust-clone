@@ -8,9 +8,10 @@ function refresh_room() {
 	instance_create_layer(32 * irandom_range(0, 43), 512, "layer_platforms", obj_bricklayer);
 	
 	// summon monsters
-	for (var i = 0; i < 4; i++) instance_create_layer(random(room_width), random(room_height), "layer_entities", obj_spawn_animation);
+	for (var i = 0; i < 4; i++) instance_create_layer(random(room_width), random(700), "layer_entities", obj_spawn_animation);
 	
 	ready = false;
 }
 
 ready = true;
+lives = 10;
