@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (flap_cooldown <= 0 && (obj_player.y <= y || random(1) < 0.2)) {
+if (flap_cooldown <= 0 && (obj_player.y <= y || random(1) < 0.2) && y > 20) {
 	MOVING_FLAP = true;
 	flap_cooldown = irandom_range(0, 30);
 } else {
