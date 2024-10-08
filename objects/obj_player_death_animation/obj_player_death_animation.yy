@@ -1,21 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_player",
+  "%Name":"obj_player_death_animation",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_player",
+  "name":"obj_player_death_animation",
   "overriddenProperties":[],
   "parent":{
-    "name":"entities",
-    "path":"folders/Objects/entities.yy",
+    "name":"animations",
+    "path":"folders/Objects/animations.yy",
   },
   "parentObjectId":{
-    "name":"class_moveable",
-    "path":"objects/class_moveable/class_moveable.yy",
+    "name":"obj_circle_animation",
+    "path":"objects/obj_circle_animation/obj_circle_animation.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,10 +34,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_player_flying",
-    "path":"sprites/spr_player_flying/spr_player_flying.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

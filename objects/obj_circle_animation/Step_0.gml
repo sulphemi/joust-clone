@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-theta += 0.05;
+theta += d_theta;
 
 for (var i = 0; i < star_ct; i++) {
 	var phi = i * TWOPI / star_ct + theta;

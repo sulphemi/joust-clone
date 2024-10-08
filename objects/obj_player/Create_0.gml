@@ -19,11 +19,18 @@ hitbox_width = 30;
 
 dashless_blend = make_color_rgb(150, 150, 255);
 collidable_frames = 0;
+dead = false;
+iframes = 60;
 
 function die() {
+	instance_create_depth(x, y, -10, obj_player_death_animation);
+	dead = true;
+	
 	x = startx;
 	y = starty;
 	
 	xv = 0;
 	yv = 0;
+	
+	iframes = 60;
 }

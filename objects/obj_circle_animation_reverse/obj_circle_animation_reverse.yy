@@ -9,7 +9,10 @@
     "name":"animations",
     "path":"folders/Objects/animations.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_circle_animation",
+    "path":"objects/obj_circle_animation/obj_circle_animation.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -1,3 +1,4 @@
+if (dead) exit;
 
 // controls
 MOVING_LEFT = keyboard_check(LEFT);
@@ -61,6 +62,14 @@ if (dash_ok) {
 }
 
 
+if (iframes) {
+	iframes--;
+	image_alpha = 0.5;
+	exit;
+} else {
+	image_alpha = 1.0;	
+}
+
 // collision with enemies
 var collided = collision_rectangle(x - hitbox_width / 2, y - hitbox_height / 2, x + hitbox_width / 2, y + hitbox_height / 2, obj_enemy, 0, 1);
 if (collided) {
@@ -75,23 +84,23 @@ if (collided) {
 		if (y > collided.y + collided.sprite_height / 2) {
 			// the thing is way above me
 			die();
-		}
-		
-		if (collided.facing) { // enemy is facing right
-			if (x > collided.x) {
-				// die
-				die();
-			} else {
-				// bounce
-				xv *= -1;
-			}
-		} else { // enemy is facing left
-			if (x < collided.x) {
-				//die	
-				die();
-			} else {
-				//bounce
-				xv *= -1;
+		} else {
+			if (collided.facing) { // enemy is facing right
+				if (x > collided.x) {
+					// die
+					die();
+				} else {
+					// bounce
+					xv *= -1;
+				}
+			} else { // enemy is facing left
+				if (x < collided.x) {
+					//die	
+					die();
+				} else {
+					//bounce
+					xv *= -1;
+				}
 			}
 		}
 	}
