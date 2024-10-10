@@ -5,8 +5,8 @@ TWOPI = 6.2831852;
 MAX_R = 50;
 SPEED_DIV = 20;
 radius = 1;
-star_ct = 10;
-d_theta = 0.05;
+star_ct = irandom_range(5, 10);
+d_theta = 0.0;
 
 // init stars
 for (var i = 0; i < star_ct; i++) {
