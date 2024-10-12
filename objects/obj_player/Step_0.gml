@@ -4,6 +4,8 @@ if (dead) exit;
 MOVING_LEFT = keyboard_check(LEFT);
 MOVING_RIGHT = keyboard_check(RIGHT);
 MOVING_FLAP = keyboard_check_pressed(FLAP);
+UP_PRESSED = keyboard_check(UP);
+DOWN_PRESSED = keyboard_check(DOWN);
 
 // Inherit the parent event
 event_inherited();
@@ -19,25 +21,30 @@ if (dash_ok and keyboard_check_pressed(DASH)) {
 	var prev_x = x;
 	var prev_y = y;
 	
-	// instantly change position
-	if (MOVING_LEFT ^ MOVING_RIGHT) { // exor
+	// prioritize up/down dash
+	if (UP_PRESSED ^ DOWN_PRESSED) {
+		if (UP_PRESSED) {
+			y -= 200;
+		} else {
+			y += 150;
+		}
+	} else if (MOVING_LEFT ^ MOVING_RIGHT) { // one or the other being pressed
 		if (MOVING_LEFT) {
-			x -= 150;
+			x -= 300;
 			xv = min(xv, 0);
 		}
 		if (MOVING_RIGHT) {
-			x += 150;
+			x += 300;
 			xv = max(xv, 0);
 		}
-	} else { // only one is being pressed
+	} else { // either both pressed or none pressed
 		if (facing) {
-			x += 150;
+			x += 300;
 		} else {
-			x -= 150;	
+			x -= 300;	
 		}
 	}
-	if (keyboard_check(UP)) y -= 150;
-	if (keyboard_check(DOWN)) y += 150;
+
 	yv = min(0, yv);
 	
 	// draw particles
