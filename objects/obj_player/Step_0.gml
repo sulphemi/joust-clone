@@ -3,12 +3,14 @@ if (dead) exit;
 // controls
 MOVING_LEFT = keyboard_check(LEFT);
 MOVING_RIGHT = keyboard_check(RIGHT);
-MOVING_FLAP = keyboard_check_pressed(FLAP);
+//MOVING_FLAP = keyboard_check_pressed(FLAP);
+MOVING_UP = keyboard_check(FLAP);
 UP_PRESSED = keyboard_check(UP);
 DOWN_PRESSED = keyboard_check(DOWN);
 
-// Inherit the parent event
-event_inherited();
+if (MOVING_UP) {
+	yv -= 0.8;	
+}
 
 // refresh dash if grounded
 if (grounded) dash_ok = true;
@@ -53,14 +55,19 @@ if (dash_ok and keyboard_check_pressed(DASH)) {
 	}
 	
 	// if i dashed into something, kill that thing
-	var dashed_into = collision_line(prev_x, prev_y, x, y, obj_enemy, 0, 1);
-	if (dashed_into) instance_destroy(dashed_into);
+	//var dashed_into = collision_line(prev_x, prev_y, x, y, obj_enemy, 0, 1);
+	//if (dashed_into) instance_destroy(dashed_into);
 	
 	// if i ended up in something, kill that thing
-	collidable_frames = 10;
+	collidable_frames = 20;
 }
 
 if (collidable_frames) collidable_frames--;
+
+
+// Inherit the parent event
+event_inherited();
+
 
 if (dash_ok) {
 	image_blend = -1;	
@@ -81,7 +88,7 @@ if (iframes) {
 var collided = collision_rectangle(x - hitbox_width / 2, y - hitbox_height / 2, x + hitbox_width / 2, y + hitbox_height / 2, obj_enemy, 0, 1);
 if (collided) {
 	if (collidable_frames) { // i just came off of a dash
-		instance_destroy(collided);
+		exit;
 	} else if (y < collided.y - collided.sprite_height / 2) { // the thing is below me
 		//yv *= -1;
 		yv = -8; // small bounce
