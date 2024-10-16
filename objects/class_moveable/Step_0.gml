@@ -42,10 +42,11 @@ if (yv >= 0) {
 	}
 }
 
-if (yv < 0) {
+if (yv <= 0) {
 	var platform = collision_rectangle(x - hitbox_width / 2, y - hitbox_height / 2 + yv, x + hitbox_width / 2, y, obj_platform, 0, 1);
 	if (platform) {
-		yv = 0;	
+		y = platform.y + platform.sprite_height + hitbox_height / 2;
+		yv = 0;
 	}
 }
 
