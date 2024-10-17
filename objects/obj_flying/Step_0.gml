@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (flap_cooldown <= 0 && random(1) < 0.1 && y > 20) {
+if (flap_cooldown == 0 && y > target_y) {
 	MOVING_FLAP = true;
-	flap_cooldown = irandom_range(0, 20);
+	flap_cooldown = 10;
 } else {
 	MOVING_FLAP = false;
 	if (flap_cooldown > 0) flap_cooldown--;
@@ -16,8 +16,10 @@ if (MOVING_LEFT + MOVING_RIGHT > 0) { // my controls are "pressed"
 	// coin toss to determine new direction
 	if (random(1) < 0.5) {
 		MOVING_RIGHT = irandom_range(0, 500);
+		pick_new_y();
 	} else {
 		MOVING_LEFT = irandom_range(0, 500);
+		pick_new_y();
 	}
 }
 
@@ -43,7 +45,7 @@ if (collided) {
 
 if (MOVING_FLAP) {
 	sprite_index = spr_flying_flap;
-	flap_frames = 10;
+	flap_frames = 4;
 } else {
 	if (flap_frames) {
 		sprite_index = spr_flying_flap;

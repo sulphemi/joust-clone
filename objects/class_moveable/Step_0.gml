@@ -17,7 +17,7 @@ if (MOVING_RIGHT) {
 }
 
 if (MOVING_FLAP) {
-	yv -= 8.5;
+	yv -= FLAP_DELTA;
 }
 
 // cap values
