@@ -61,8 +61,9 @@ if (dash_ok and keyboard_check_pressed(DASH)) {
 	}
 	
 	// if i dashed into something, kill that thing
-	//var dashed_into = collision_line(prev_x, prev_y, x, y, obj_enemy, 0, 1);
-	//if (dashed_into) instance_destroy(dashed_into);
+	// hitbox is extended to 2x the sprite width to provide a generous amount of padding
+	var dashed_into = collision_rectangle(prev_x, prev_y - sprite_height, x, y + sprite_height, obj_enemy, 0, 1);
+	if (dashed_into) instance_destroy(dashed_into);
 	
 	// if i ended up in something, kill that thing
 	collidable_frames = 20;
@@ -94,7 +95,7 @@ if (iframes) {
 var collided = collision_rectangle(x - hitbox_width / 2, y - hitbox_height / 2, x + hitbox_width / 2, y + hitbox_height / 2, obj_enemy, 0, 1);
 if (collided) {
 	if (collidable_frames) { // i just came off of a dash
-		exit;
+		instance_destroy(collided);
 	} else if (y < collided.y - collided.sprite_height / 2) { // the thing is below me
 		//yv *= -1;
 		yv = -8; // small bounce
