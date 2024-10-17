@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_betterbricks",
-    "path":"sprites/spr_betterbricks/spr_betterbricks.yy",
+    "name":"spr_evenbetterbricks",
+    "path":"sprites/spr_evenbetterbricks/spr_evenbetterbricks.yy",
   },
   "spriteMaskId":null,
   "visible":true,

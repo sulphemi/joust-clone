@@ -80,6 +80,7 @@
     {"id":{"name":"spr_elite_flap","path":"sprites/spr_elite_flap/spr_elite_flap.yy",},},
     {"id":{"name":"spr_elite","path":"sprites/spr_elite/spr_elite.yy",},},
     {"id":{"name":"spr_end_bg","path":"sprites/spr_end_bg/spr_end_bg.yy",},},
+    {"id":{"name":"spr_evenbetterbricks","path":"sprites/spr_evenbetterbricks/spr_evenbetterbricks.yy",},},
     {"id":{"name":"spr_flying_flap","path":"sprites/spr_flying_flap/spr_flying_flap.yy",},},
     {"id":{"name":"spr_flying","path":"sprites/spr_flying/spr_flying.yy",},},
     {"id":{"name":"spr_game_bg","path":"sprites/spr_game_bg/spr_game_bg.yy",},},
