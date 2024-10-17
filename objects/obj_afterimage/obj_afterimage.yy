@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player_flying",
-    "path":"sprites/spr_player_flying/spr_player_flying.yy",
+    "name":"spr_afterimage",
+    "path":"sprites/spr_afterimage/spr_afterimage.yy",
   },
   "spriteMaskId":null,
   "visible":true,
