@@ -46,22 +46,21 @@ if (yv < 0) {
 	var platform = collision_rectangle(x - hitbox_width / 2, y - hitbox_height / 2 + yv, x + hitbox_width / 2, y, obj_platform, 0, 1);
 	if (platform) {
 		y = platform.y + platform.sprite_height + hitbox_height / 2;
-		yv *= -1;
-		yv = min(yv, 5);
+		yv *= -0.5;
 	}
 }
 
 if (xv >= 0) {
 	var	platform = collision_rectangle(x - hitbox_width / 2, y - hitbox_height / 2, x + hitbox_width / 2 + xv, y, obj_platform, 0, 1);
 	if (platform) {
-		xv *= -1;
+		xv *= -0.5;
 	}
 }
 
 if (xv < 0) {
 	var	platform = collision_rectangle(x - hitbox_width / 2 + xv, y - hitbox_height / 2, x + hitbox_width / 2, y, obj_platform, 0, 1);
 	if (platform) {
-		xv *= -1;
+		xv *= -0.5;
 	}
 }
 
