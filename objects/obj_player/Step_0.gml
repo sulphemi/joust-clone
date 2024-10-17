@@ -67,7 +67,7 @@ if (dash_ok and keyboard_check_pressed(DASH)) {
 	
 	// if i dashed into something, kill that thing
 	// hitbox is extended to 2x the sprite width to provide a generous amount of padding
-	var dashed_into = collision_rectangle(prev_x, prev_y - sprite_height, x, y + sprite_height, obj_enemy, 0, 1);
+	var dashed_into = collision_rectangle(prev_x - sprite_width, prev_y - sprite_height, x + sprite_width, y + sprite_height, obj_enemy, 0, 1);
 	if (dashed_into) instance_destroy(dashed_into);
 	
 	// if i ended up in something, kill that thing
