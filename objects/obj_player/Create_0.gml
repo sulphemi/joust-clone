@@ -17,10 +17,12 @@ event_inherited();
 
 hitbox_width = 30;
 
-dashless_blend = make_color_rgb(150, 150, 255);
+dashless_blend = make_color_rgb(120, 120, 255);
 collidable_frames = 0;
 dead = false;
 iframes = 60;
+
+dash_cooldown = 0;
 
 function die() {
 	lives--;

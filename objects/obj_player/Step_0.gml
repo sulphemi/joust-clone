@@ -12,12 +12,17 @@ if (MOVING_UP) {
 	yv -= 0.8;	
 }
 
-// refresh dash if grounded
-if (grounded) dash_ok = true;
+// refresh dash off cooldown
+if (dash_cooldown > 0) {
+	dash_cooldown--;
+} else {
+	dash_ok = true;	
+}
 
 // dash
 if (dash_ok and keyboard_check_pressed(DASH)) {
 	dash_ok = false; // consume dash
+	dash_cooldown = 60;
 	
 	// cache previous position
 	var prev_x = x;
