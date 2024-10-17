@@ -53,10 +53,11 @@ if (dash_ok and keyboard_check_pressed(DASH)) {
 	for (var i = 0; i < 30; i++) {
 		var instance = instance_create_depth(prev_x, prev_y, -1, obj_dash_particle);
 	}
-	for (var i = 0; i < 30; i++) {
-		var _x = prev_x + (x - prev_x) / 30 * i;
-		var _y = prev_y + (y - prev_y) / 30 * i;
-		var instance = instance_create_depth(_x, _y, -1, obj_afterimage);	
+	for (var i = 0; i < 4; i++) {
+		var _x = prev_x + (x - prev_x) / 4 * i;
+		var _y = prev_y + (y - prev_y) / 4 * i;
+		var instance = instance_create_layer(_x, _y, "layer_particles", obj_afterimage);
+		if (facing) instance.image_xscale = -1;
 	}
 	
 	// if i dashed into something, kill that thing

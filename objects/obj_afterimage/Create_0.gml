@@ -1,5 +1,5 @@
-xv = random_range(-0.05, 0.05);
-yv = random_range(-0.05, 0.05);
+xv = random_range(-0.25, 0.25);
+yv = random_range(-0.25, 0.25);
 
-image_alpha = 0.5;
+image_alpha = 0.25;
 decay = 0.95;
